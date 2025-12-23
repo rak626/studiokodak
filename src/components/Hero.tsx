@@ -10,7 +10,7 @@ const rougeScript = Rouge_Script({
 const Hero = () => {
     return (
         <section
-            className="relative flex flex-col min-h-[70vh] bg-linear-to-b from-[#faf7f2] to-white items-center justify-center px-6">
+            className="relative flex flex-col min-h-[90vh]  bg-bg-base items-center justify-center px-6">
             <div className="relative text-center">
 
                 {/* Main Brand */}

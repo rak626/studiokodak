@@ -1,7 +1,7 @@
 "use client";
 
 import React, {useState} from "react";
-import {Profile} from "@/util/data";
+import {Profile} from "@/util/profile";
 import {Button} from "@/components/ui/button";
 import {formatMobileNumber} from "@/lib/utilfunc";
 
@@ -65,7 +65,7 @@ ${form.message}`;
         isSending;
 
     return (
-        <section id="contact" className="py-28 bg-linear-to-b from-[#faf7f2] to-white">
+        <section id="contact" className="py-28">
             <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
 
                 {/* Left Content */}

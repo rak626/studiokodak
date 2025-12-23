@@ -66,7 +66,7 @@ export default function PortfolioCarousel({images}: Props) {
     /* ================= RENDER ================= */
 
     return (
-        <section id="portfolio" className="py-32 overflow-hidden bg-linear-to-b from-[#faf7f2] to-white">
+        <section id="portfolio" className="py-32 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
                 <h3 className="text-4xl font-semibold text-center">
                     Featured Work

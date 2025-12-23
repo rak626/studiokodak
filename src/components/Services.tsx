@@ -1,13 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import {ServicesList} from "@/util/data";
+import {ServicesList} from "@/util/services";
 import {ServiceType} from "@/util/type";
 import {JSX, useEffect, useState} from "react";
 import {AnimatePresence, motion} from "framer-motion";
 import {getGalleryImages} from "@/actions/getGalleryImages";
 
-// shadcn carousel
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 
 export default function ServicesCardsOptimized(): JSX.Element {
@@ -31,7 +30,7 @@ export default function ServicesCardsOptimized(): JSX.Element {
     }, [activeService]);
 
     return (
-        <section id="services" className="py-28 bg-linear-to-b from-[#faf7f2] to-white">
+        <section id="services" className="py-28">
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* Section Header */}
@@ -171,17 +170,6 @@ export default function ServicesCardsOptimized(): JSX.Element {
                                         </CarouselContent>}
                                     </Carousel>
                                 </div>
-
-
-                                {/*/!* Modal Footer *!/*/}
-                                {/*<div className="px-6 pb-6">*/}
-                                {/*    <h3 className="text-2xl font-semibold mb-2">*/}
-                                {/*        {activeService.name}*/}
-                                {/*    </h3>*/}
-                                {/*    <p className="text-neutral-600">*/}
-                                {/*        {activeService.description}*/}
-                                {/*    </p>*/}
-                                {/*</div>*/}
                             </motion.div>
                         </div>
                     </motion.div>

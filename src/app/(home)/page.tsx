@@ -5,23 +5,34 @@ import ServicesPage from "@/app/(home)/services/page";
 import AboutPage from "@/app/(home)/about/page";
 import PricingPage from "@/app/(home)/pricing/page";
 import ContactPage from "@/app/(home)/contact/page";
+import Section from "@/components/Section";
 
 export default function Home() {
     return (
-        <div>
+        <>
             <Hero/>
-            <hr className={`my-1`}/>
-            <PortfolioPage/>
-            <hr className={`my-1`}/>
-            <ServicesPage/>
-            <hr className={`my-1`}/>
-            <AboutPage/>
-            <hr className={`my-1`}/>
-            <PricingPage/>
-            <hr className={`my-1`}/>
-            <ContactPage/>
-            <hr className={`my-1`}/>
+
+            <Section variant="alt">
+                <PortfolioPage/>
+            </Section>
+
+            <Section>
+                <ServicesPage/>
+            </Section>
+
+            <Section variant="alt">
+                <AboutPage/>
+            </Section>
+
+            <Section>
+                <PricingPage/>
+            </Section>
+
+            <Section variant="alt">
+                <ContactPage/>
+            </Section>
+
             <Footer/>
-        </div>
+        </>
     );
 }

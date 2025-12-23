@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { JSX } from "react";
-import { Profile } from "@/util/data";
+import {JSX} from "react";
+import {Profile} from "@/util/profile";
 
 export default function About(): JSX.Element {
     return (
         <section
             id="about"
-            className="relative py-28 bg-linear-to-b from-[#faf7f2] to-white"
+            className="relative py-28"
         >
             <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
 
@@ -36,7 +36,7 @@ export default function About(): JSX.Element {
                 {/* Right: Image */}
                 <div className="relative flex justify-center">
                     {/* Soft frame */}
-                    <div className="absolute -inset-4 rounded-3xl " />
+                    <div className="absolute -inset-4 rounded-3xl "/>
 
                     <Image
                         src="/images/studio_kodak_owner.webp"

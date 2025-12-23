@@ -1,4 +1,3 @@
-// util/pricing.ts
 export const pricingData = [
     {
         service: "Wedding Photography & Videography",
