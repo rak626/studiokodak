@@ -1,5 +1,5 @@
-import React from "react";
 import {Rouge_Script} from "next/font/google";
+import Link from "next/link";
 
 const rougeScript = Rouge_Script({
     subsets: ["latin"],
@@ -9,7 +9,8 @@ const rougeScript = Rouge_Script({
 
 const Hero = () => {
     return (
-        <section className="relative flex min-h-[70vh] items-center justify-center bg-[#f5f2ed] px-6">
+        <section
+            className="relative flex flex-col min-h-[70vh] bg-linear-to-b from-[#faf7f2] to-white items-center justify-center px-6">
             <div className="relative text-center">
 
                 {/* Main Brand */}
@@ -24,10 +25,28 @@ const Hero = () => {
 
                 {/* Subtitle */}
                 <p
-                    className={`${rougeScript.className} text-[clamp(2rem,4vw,4rem)] tracking-wider text-neutral-700`}
+                    className={`mt-4 text-lg md:text-xl text-neutral-700`}
                 >
-                    Photography
+                    Professional, Wedding, Portrait & Creative Photography
                 </p>
+            </div>
+            <div className="mt-8 flex justify-center gap-4">
+                <Link href="#portfolio">
+                    <button
+                        type="button"
+                        className="bg-black text-white px-6 py-3 rounded-full font-medium"
+                    >
+                        View Portfolio
+                    </button>
+                </Link>
+                <Link href="#contact">
+                    <button
+                        type="button"
+                        className="border border-black px-6 py-3 rounded-full font-medium"
+                    >
+                        Book a Session
+                    </button>
+                </Link>
             </div>
         </section>
     );

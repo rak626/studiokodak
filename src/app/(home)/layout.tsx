@@ -6,11 +6,11 @@ const HomeLayout = ({children}: { children: ReactNode }) => {
     return (
         <main>
             <ContentHolder>
-                <div>
+                <>
                     <Navbar/>
                     {children}
                     {/*<Footer/>*/}
-                </div>
+                </>
             </ContentHolder>
 
         </main>

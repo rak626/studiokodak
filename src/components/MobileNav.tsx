@@ -2,19 +2,14 @@
 
 import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { navElements } from "@/util/data";
-import {
-    Sheet,
-    SheetClose,
-    SheetContent,
-    SheetTrigger,
-} from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
-import { LucideMenu } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-import { DialogTitle } from "@radix-ui/react-dialog";
+import {usePathname} from "next/navigation";
+import {navLinks} from "@/util/nav";
+import {Sheet, SheetClose, SheetContent, SheetTrigger,} from "@/components/ui/sheet";
+import {Button} from "@/components/ui/button";
+import {LucideMenu} from "lucide-react";
+import {AnimatePresence, motion} from "framer-motion";
+import {VisuallyHidden} from "@radix-ui/react-visually-hidden";
+import {DialogTitle} from "@radix-ui/react-dialog";
 
 interface MobileNavProps {
     mobileOpen: boolean;
@@ -39,8 +34,8 @@ const MobileNav: React.FC<MobileNavProps> = ({
                         className="text-gray-900 hover:bg-gray-100"
                         aria-label="Open menu"
                     >
-                        <motion.div whileTap={{ scale: 0.9 }}>
-                            <LucideMenu className="h-7 w-7" />
+                        <motion.div whileTap={{scale: 0.9}}>
+                            <LucideMenu className="h-7 w-7"/>
                         </motion.div>
                     </Button>
                 </SheetTrigger>
@@ -57,15 +52,15 @@ const MobileNav: React.FC<MobileNavProps> = ({
 
                     <nav className="mt-8 space-y-6">
                         <AnimatePresence>
-                            {navElements.map((nav, index) => {
+                            {navLinks.map((nav, index) => {
                                 const isActive = pathname === nav.slug;
 
                                 return (
                                     <motion.div
                                         key={nav.slug}
-                                        initial={{ x: 40, opacity: 0 }}
-                                        animate={{ x: 0, opacity: 1 }}
-                                        exit={{ x: 40, opacity: 0 }}
+                                        initial={{x: 40, opacity: 0}}
+                                        animate={{x: 0, opacity: 1}}
+                                        exit={{x: 40, opacity: 0}}
                                         transition={{
                                             type: "spring",
                                             stiffness: 260,

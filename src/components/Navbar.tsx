@@ -3,7 +3,7 @@
 import React, {useState} from "react";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
-import {navElements} from "@/util/data";
+import {navLinks} from "@/util/nav";
 import {motion} from "framer-motion";
 import MobileNav from "./MobileNav";
 
@@ -17,7 +17,7 @@ const Navbar = () => {
 
                 {/* Desktop Navigation */}
                 <ul className="hidden lg:flex justify-center items-center gap-10">
-                    {navElements.map((nav) => {
+                    {navLinks.map((nav) => {
                         const isActive = pathname === nav.slug;
 
                         return (

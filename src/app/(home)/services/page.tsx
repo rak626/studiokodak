@@ -1,8 +1,8 @@
 import React from 'react'
+import ServicesCardsOptimized from "@/components/Services";
 
-const Services = () => {
+export default function ServicesPage() {
     return (
-        <div>Services</div>
+        <ServicesCardsOptimized/>
     )
 }
-export default Services
