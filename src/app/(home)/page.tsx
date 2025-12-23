@@ -8,7 +8,7 @@ import ContactPage from "@/app/(home)/contact/page";
 
 export default function Home() {
     return (
-        <div className={`bg-bg-base`}>
+        <div>
             <Hero/>
             <hr className={`my-1`}/>
             <PortfolioPage/>
