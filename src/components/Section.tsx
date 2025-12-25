@@ -12,7 +12,7 @@ export default function Section({
     return (
         <section
             className={cn(
-                "py-28 md:py-32",
+                "py-12 md:py-16",
                 variant === "base" && "bg-bg-base",
                 variant === "alt" && "bg-bg-alt"
             )}

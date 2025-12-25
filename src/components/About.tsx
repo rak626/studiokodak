@@ -39,7 +39,7 @@ export default function About(): JSX.Element {
                     <div className="absolute -inset-4 rounded-3xl "/>
 
                     <Image
-                        src="/images/studio_kodak_owner.webp"
+                        src="/images/studio_kodak_owner.jpg"
                         alt="Studio Kodak Founder"
                         width={360}
                         height={480}

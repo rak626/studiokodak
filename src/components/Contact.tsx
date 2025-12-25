@@ -30,15 +30,13 @@ const Contact = () => {
 
         setIsSending(true);
 
-        const whatsappMessage =
-            `Hello Studio Kodak 👋
+        const whatsappMessage = `Hello Studio Kodak,
+                                 Name: ${form.name}
+                                 Email: ${form.email || "N/A"}
+                                 Phone: ${form.phone}
 
-Name: ${form.name}
-Email: ${form.email || "N/A"}
-Phone: ${form.phone}
-
-Shoot Details:
-${form.message}`;
+                                 Shoot Details:
+                                 ${form.message}`;
 
         const whatsappURL =
             `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
@@ -81,7 +79,7 @@ ${form.message}`;
 
                     <div className="mt-8 space-y-3 text-sm text-neutral-700">
                         <ul className="space-y-2">
-                            <li>📞 +91 {Profile.mobileNo}</li>
+                            <li>📞 +91 {Profile.mobileNo} | +91 {Profile.mobileNo2}</li>
                             <li>✉️ {Profile.email}</li>
                             <li>📍 {Profile.address1}</li>
                         </ul>

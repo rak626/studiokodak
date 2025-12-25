@@ -19,7 +19,7 @@ export const ServicesList: ServiceType[] = [
     },
     {
         name: "Event Photography",
-        imgName: "event.webp",
+        imgName: "event.jpg",
         description:
             "Professional coverage of corporate events, parties, and special occasions with attention to detail.",
         category: "Events",
@@ -27,7 +27,7 @@ export const ServicesList: ServiceType[] = [
     },
     {
         name: "Portrait Photography",
-        imgName: "portrait.webp",
+        imgName: "portrait.png",
         description:
             "Personal and professional portrait sessions crafted to highlight personality and confidence.",
         category: "Portrait",
@@ -35,7 +35,7 @@ export const ServicesList: ServiceType[] = [
     },
     {
         name: "Conceptual Photography",
-        imgName: "conceptual.webp",
+        imgName: "conceptual.jpg",
         description:
             "Artistic and imaginative photography that tells a story or conveys a specific idea through visual elements.",
         category: "Conceptual",
@@ -43,7 +43,7 @@ export const ServicesList: ServiceType[] = [
     },
     {
         name: "Fine Art Photography",
-        imgName: "fine_art.webp",
+        imgName: "fine_art.jpg",
         description:
             "Creative fine art photography focusing on aesthetics, composition, and emotional impact.",
         category: "Fine Art",

@@ -12,7 +12,7 @@ const Pricing = () => {
     return (
         <section
             id="pricing"
-            className="py-28"
+            className="py-16"
         >
             <div className="max-w-6xl mx-auto px-6">
                 <h2 className="text-3xl md:text-4xl font-semibold text-center mb-20">
