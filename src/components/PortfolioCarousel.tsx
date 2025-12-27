@@ -22,7 +22,7 @@ export default function PortfolioGrid({images}: Props) {
                             className="flex justify-center bg-neutral-50"
                         >
                             <Image
-                                src={`/images/portfolio/${img}`}
+                                src={img}
                                 alt="Wedding photography work"
                                 width={1600}
                                 height={1000}

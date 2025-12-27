@@ -35,17 +35,16 @@ export default function About(): JSX.Element {
 
                 {/* Right: Image */}
                 <div className="relative flex justify-center">
-                    {/* Soft frame */}
-                    <div className="absolute -inset-4 rounded-3xl "/>
-
-                    <Image
-                        src="/images/studio_kodak_owner.jpg"
-                        alt="Studio Kodak Founder"
-                        width={360}
-                        height={480}
-                        priority
-                        className="relative rounded-2xl object-cover shadow-xl"
-                    />
+                    <div className="relative w-full max-w-sm aspect-[3/4]">
+                        <Image
+                            src="/images/studio_kodak_owner.jpg"
+                            alt="Studio Kodak Founder"
+                            fill
+                            priority
+                            className="rounded-2xl object-cover shadow-xl"
+                            sizes="(max-width: 768px) 80vw, 360px"
+                        />
+                    </div>
                 </div>
             </div>
         </section>
