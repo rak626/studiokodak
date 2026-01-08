@@ -12,7 +12,7 @@ const Navbar = () => {
     const [mobileOpen, setMobileOpen] = useState(false);
 
     return (
-        <nav className="w-full border-b sticky top-0 z-50 bg-white/80 backdrop-blur">
+        <nav className="w-full border-b lg:sticky lg:top-0 lg:z-50 lg:bg-white/80 backdrop-blur">
             <div className="mx-auto max-w-5xl px-6 py-4">
 
                 {/* Desktop Navigation */}

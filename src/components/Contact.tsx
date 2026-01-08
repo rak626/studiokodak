@@ -4,6 +4,7 @@ import React, {useState} from "react";
 import {Profile} from "@/util/profile";
 import {Button} from "@/components/ui/button";
 import {formatMobileNumber} from "@/lib/utilfunc";
+import {getPreparedMessage} from "@/lib/waMessage";
 
 const WHATSAPP_NUMBER = Profile.whatsappNo; // e.g. "919876543210"
 const formattedMobileNo = formatMobileNumber(Profile.mobileNo)
@@ -30,14 +31,7 @@ const Contact = () => {
 
         setIsSending(true);
 
-        const whatsappMessage = `Hello Studio Kodak,
-                                 Name: ${form.name}
-                                 Email: ${form.email || "N/A"}
-                                 Phone: ${form.phone}
-
-                                 Shoot Details:
-                                 ${form.message}`;
-
+        const whatsappMessage = getPreparedMessage(form);
         const whatsappURL =
             `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
 

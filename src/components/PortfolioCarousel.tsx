@@ -10,7 +10,8 @@ export default function PortfolioGrid({images}: Props) {
             id="portfolio"
             className="py-32 bg-linear-to-b from-[#faf7f2] to-white"
         >
-            <div className="max-w-6xl mx-auto px-6">
+            {/* Reduced padding on mobile */}
+            <div className="mx-auto sm:px-1 md:px-6 md:max-w-6xl">
                 <h3 className="text-4xl font-semibold text-center">
                     Featured Work
                 </h3>
@@ -18,8 +19,13 @@ export default function PortfolioGrid({images}: Props) {
                 <div className="mt-20 grid grid-cols-1 gap-2 md:gap-8">
                     {images.map((img, index) => (
                         <div
-                            key={img}
-                            className="flex justify-center bg-neutral-50"
+                            key={img + "___" + index}
+                            className="
+                                bg-neutral-50
+                                rounded-md
+                                overflow-hidden
+                                w-full
+                            "
                         >
                             <Image
                                 src={img}
@@ -27,9 +33,9 @@ export default function PortfolioGrid({images}: Props) {
                                 width={1600}
                                 height={1000}
                                 priority={index === 0}
-                                sizes="(max-width: 768px) 100vw, auto"
+                                sizes="(max-width: 768px) 100vw, 1200px"
                                 quality={75}
-                                className="h-auto max-w-full"
+                                className="w-full h-auto"
                             />
                         </div>
                     ))}

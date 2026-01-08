@@ -29,7 +29,7 @@ export default function About(): JSX.Element {
 
                     {/* Signature */}
                     <p className="mt-6 text-sm text-neutral-500">
-                        — Animesh Mishra, Founder
+                        — {Profile.name}, Founder
                     </p>
                 </div>
 

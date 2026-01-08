@@ -11,3 +11,10 @@ export type ServiceType = {
     description: string;
     gallery: string;
 }
+
+export type PreparedMessageInput = {
+    name: string;
+    email?: string;
+    phone: string;
+    message: string;
+};
