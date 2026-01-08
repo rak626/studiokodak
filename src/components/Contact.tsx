@@ -3,7 +3,7 @@
 import React, {useState} from "react";
 import {Profile} from "@/util/profile";
 import {Button} from "@/components/ui/button";
-import {formatMobileNumber} from "@/lib/utilfunc";
+import {formatMobileNumber, safeInput} from "@/lib/utilfunc";
 import {getPreparedMessage} from "@/lib/waMessage";
 
 const WHATSAPP_NUMBER = Profile.whatsappNo; // e.g. "919876543210"
@@ -31,7 +31,12 @@ const Contact = () => {
 
         setIsSending(true);
 
-        const whatsappMessage = getPreparedMessage(form);
+        const whatsappMessage = getPreparedMessage({
+            name: safeInput(form.name),
+            email: safeInput(form.email ?? ""),
+            phone: safeInput(form.phone),
+            message: safeInput(form.message),
+        });
         const whatsappURL =
             `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
 

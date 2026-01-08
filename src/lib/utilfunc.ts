@@ -16,3 +16,5 @@ export const formatMobileNumber = (mobileNumber: string) => {
     // Format the number as  XXX-XXX-XXXX
     return digits.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
 }
+
+export const safeInput = (v: string) => v.replace(/\s+/g, " ").trim();
